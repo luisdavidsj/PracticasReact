@@ -5,6 +5,7 @@ import Propiedades from "./components/Propiedades";
 import Estado from "./components/Estado";
 import RenderizadoCondicional from "./components/RenderizadoCondicional";
 import RenderizadoElementos from "./components/RenderizadoElementos";
+import Eventos from "./components/Eventos";
 
 import './App.css';
 
@@ -28,7 +29,7 @@ function App() {
         </section>
       <section>
         <Componente msg="Hola soy un Componente Funcional expresado desde una prop" />
-        <hr />
+        <hr/>
         <Propiedades
         cadena="Esto es una cadena de texto"
         numero={19}
@@ -45,6 +46,8 @@ function App() {
         <RenderizadoCondicional />
         <hr/>
         <RenderizadoElementos />
+        <hr/>
+        <Eventos />
       </section>
       </header>
     </div>
