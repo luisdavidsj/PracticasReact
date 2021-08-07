@@ -17,10 +17,10 @@ export default class AjaxApis extends Component{
   componentDidMount(){
     let url="https://pokeapi.co/api/v2/pokemon/";
     fetch(url).then((res)=>res.json()).then((json)=>{
-      console.log(json);
+      /*console.log(json);*/
       json.results.forEach(el=>{
         fetch(el.url).then((res)=>res.json()).then((json)=>{
-          console.log(json);
+          /*console.log(json);*/
           let pokemon = {
             id:json.id,
             name:json.name,
