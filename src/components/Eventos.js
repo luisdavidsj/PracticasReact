@@ -1,34 +1,34 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-export class EventosES6 extends Component{
-  constructor(props){
+export class EventosES6 extends Component {
+  constructor(props) {
     super(props);
-    this.state={
-      contador:0,
+    this.state = {
+      contador: 0,
     };
 
     this.sumar = this.sumar.bind(this);
     this.restar = this.restar.bind(this);
   }
 
-  sumar(e){
+  sumar(e) {
     console.log("Sumando");
     console.log(this);
     this.setState({
-      contador:this.state.contador+1,
-    })
+      contador: this.state.contador + 1,
+    });
   }
 
-  restar(e){
+  restar(e) {
     console.log("Restar");
     console.log(this);
     this.setState({
-      contador:this.state.contador-1,
-    })
+      contador: this.state.contador - 1,
+    });
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <h2>Eventos en Componentes de Clase ES6</h2>
         <nav>
@@ -42,29 +42,29 @@ export class EventosES6 extends Component{
 }
 
 //Properties initializer
-export class EventosES7 extends Component{
-      state={
-      contador:0,
-    };
-//Arrow functions
-  sumar=(e)=>{
+export class EventosES7 extends Component {
+  state = {
+    contador: 0,
+  };
+  //Arrow functions
+  sumar = (e) => {
     console.log("Sumando");
     console.log(this);
     this.setState({
-      contador:this.state.contador+1,
-    })
-  }
+      contador: this.state.contador + 1,
+    });
+  };
 
-  restar=(e)=>{
+  restar = (e) => {
     console.log("Restar");
     console.log(this);
     this.setState({
-      contador:this.state.contador-1,
-    })
-  }
+      contador: this.state.contador - 1,
+    });
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <h2>Eventos en Componentes de Clase ES7</h2>
         <nav>
@@ -83,25 +83,37 @@ export class EventosES7 extends Component{
 
 /*const Boton=(props)=>(<button onClick={props.myOnClick}>Botón hecho componente</button>);*/
 
-const Boton=({myOnClick})=>(<button onClick={myOnClick}>Botón hecho componente</button>);
+const Boton = ({ myOnClick }) => (
+  <button onClick={myOnClick}>Botón hecho componente</button>
+);
 
-export class MasSobreEventos extends Component{
-handleClick = (e,mensaje) => {
-  console.log(e);
-  console.log(e.nativeEvent);
-  console.log(e.target);
-  console.log(e.nativeEvent.target);
-  console.log(mensaje);
-}
+export class MasSobreEventos extends Component {
+  handleClick = (e, mensaje) => {
+    console.log(e);
+    console.log(e.nativeEvent);
+    console.log(e.target);
+    console.log(e.nativeEvent.target);
+    console.log(mensaje);
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <h2>Más sobre eventos</h2>
-        <button onClick={(e)=>this.handleClick(e,"Hola pasando parametro desde un evento")}>Saludar</button>
+        <button
+          onClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        >
+          Saludar
+        </button>
         {/*Evento personalizado*/}
         {/*<Boton onClick={(e)=>this.handleClick(e,"Hola pasando parametro desde un evento")}/>*/}
-        <Boton myOnClick={(e)=>this.handleClick(e,"Hola pasando parametro desde un evento")}/>
+        <Boton
+          myOnClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        />
       </div>
     );
   }
