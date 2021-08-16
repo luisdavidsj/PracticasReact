@@ -15,6 +15,7 @@ import RelojHooks from "./components/RelojHooks";
 import AjaxHooks from "./components/AjaxHooks";
 import "./App.css";
 import Saludo from "./components/HolaMundo";
+import HooksPersonalizados from "./components/HooksPersonalizados";
 
 function App() {
   return (
@@ -77,6 +78,8 @@ function App() {
           <AjaxHooks />
           <hr />
           <Saludo />
+          <hr />
+          <HooksPersonalizados />
         </section>
       </header>
     </div>
